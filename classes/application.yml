@@ -1,0 +1,19 @@
+server: 
+   port: 8080
+
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/dchis
+    username: root
+    password: Password@2022
+  jpa:
+    show_sql: true
+    properties:
+      hibernate:
+        jdbc.batch_size: 100
+        dialect: org.hibernate.dialect.MySQL55Dialect
+        format_sql: false
+    hibernate:
+      ddl-auto: update
+    defer-datasource-initialization: true
